@@ -4,7 +4,7 @@ This repository contains the starter files for the CSS Grid Intro coding exercis
 
 This exercise is your first introduction to CSS Grid. CSS Grid is a layout system that lets you arrange content into rows and columns. It is especially useful when you want to divide a page into larger layout areas, such as columns, sidebars, headers, footers, galleries, and other structured page sections.
 
-In this exercise, the examples are intentionally simple. The goal is not to create a fully designed website yet. Instead, the goal is to understand the basic Grid concepts you will need before moving into more complete website layouts, including the Flower Page exercise.
+In this exercise, the examples are intentionally simple. The goal is to understand the basic Grid concepts you will need before moving into more complete website layouts.
 
 ---
 
@@ -20,9 +20,7 @@ Follow the Canvas instructions and watch the screencast videos in order.
 
 ## Important GitHub Workflow
 
-This assignment uses a GitHub template repository.
-
-You are not downloading a ZIP file for this exercise.
+This assignment uses a GitHub template repository. You are not downloading a ZIP file for this exercise.
 
 Instead, you will:
 
@@ -36,84 +34,8 @@ Instead, you will:
 8. Add the published GitHub Pages link to the About section of your repository.
 9. Submit the URL of your GitHub repository in Canvas.
 
-The submitted Canvas link should be the repository URL, not the published GitHub Pages website URL.
+The submitted Canvas link should be the **repository** URL, not the published GitHub Pages website URL.
 
-Your instructor needs the repository URL so your code can be reviewed.
-
----
-
-## Repository URL vs. Published Website URL
-
-For this exercise, you will end up with two different URLs.
-
-### Repository URL
-
-The repository URL shows your code on GitHub.
-
-It will look something like this:
-
-- `https://github.com/your-username/css-grid-intro`
-
-This is the URL you submit in Canvas.
-
-### GitHub Pages URL
-
-The GitHub Pages URL shows the live published website.
-
-It will look something like this:
-
-- `https://your-username.github.io/css-grid-intro/`
-
-This is the URL you should add to the About section of your GitHub repository.
-
-Do not submit only the GitHub Pages URL in Canvas. The published site is useful, but the repository is what your instructor needs to grade your code.
-
----
-
-## What You Will Practice
-
-By completing this exercise, you will practice how to:
-
-- Create your own repository from an instructor template
-- Clone your repository with GitHub Desktop
-- Open a full project folder in Visual Studio Code
-- Work with an HTML file and an external CSS file
-- Identify a grid container
-- Identify grid items
-- Turn on CSS Grid with `display: grid;`
-- Create equal-width columns with fractional units
-- Create unequal-width columns with fractional units
-- Add space between grid items with `gap`
-- Make one grid item span across multiple columns
-- Use Grid to preview a simple page layout with a main content area and sidebar
-- Complete an “On Your Own” Grid challenge
-- Commit and push changes to GitHub
-- Publish a repository with GitHub Pages
-- Add the GitHub Pages URL to the About section of the repository
-- Submit the correct GitHub repository URL in Canvas
-
----
-
-## Starter Files
-
-This repository includes:
-
-- `index.html`
-- `reset.css`
-- `styles.css`
-- `README.md`
-
-The main page file is:
-
-- `index.html`
-
-The CSS file you will edit is:
-
-- `styles.css`
-
-The `reset.css` file is already linked for you. It helps reduce browser default styling so the page starts from a more predictable baseline.
-
-Do not delete or rename the starter files unless your instructor specifically tells you to.
 
 ---
 
@@ -121,9 +43,9 @@ Do not delete or rename the starter files unless your instructor specifically te
 
 CSS Grid is one of the main layout tools used in modern web design.
 
-Earlier in the course, you learned how to create HTML structure and write basic CSS. You also practiced some Flexbox. Flexbox is very useful when you want to arrange content in one direction, such as a row or a column.
+Earlier in the course, you learned how to create HTML structure, write basic CSS styles, and did a little Flexbox. Flex is useful when you want to arrange content in one direction, such as a single row or a single column.
 
-Grid is especially useful when you want to think in rows and columns at the same time.
+Grid is especially useful when you want to think in both rows AND columns at the same time.
 
 For example, Grid can help create:
 
@@ -150,110 +72,9 @@ The direct children of that parent become grid items.
 
 That means Grid is usually controlled from the parent container.
 
-For example, if a `div` contains three sections, you usually turn the `div` into the grid container. The three sections inside it become the grid items.
+For example, if a `<div>` contains three sections, you usually turn the `<div>` into the grid container. The three sections inside it become the grid items.
 
 This is one of the most important concepts in CSS Grid.
-
----
-
-## Demo 1: Equal Columns
-
-In the first demo, you will create a three-column grid where each column takes up the same amount of space.
-
-You will use:
-
-- `display: grid;`
-- `grid-template-columns: 1fr 1fr 1fr;`
-
-The `fr` unit stands for “fraction of available space.”
-
-When you write:
-
-- `1fr 1fr 1fr`
-
-you are creating three equal columns.
-
-Each column receives one equal share of the available space.
-
----
-
-## Demo 2: Unequal Columns
-
-In the second demo, you will use fractional units to create columns that are not all the same size.
-
-For example:
-
-- `grid-template-columns: 2fr 1fr 2fr;`
-
-This creates three columns.
-
-The first column gets 2 shares of space.
-
-The middle column gets 1 share of space.
-
-The third column gets 2 shares of space.
-
-That means the first and third columns are wider, while the middle column is narrower.
-
-This is useful when you want columns to have a proportional relationship instead of a fixed pixel width.
-
----
-
-## Demo 3: Adding Gap
-
-In the third demo, you will add space between grid items.
-
-You will use:
-
-- `gap: 1rem;`
-
-The `gap` property creates space between rows and columns in the grid.
-
-This is usually easier and cleaner than adding margins to individual grid items.
-
-In this demo, there are six grid items. When you create three columns, the grid automatically creates a second row for the extra items.
-
-That is another useful feature of Grid: you can define the columns, and the browser can create additional rows as needed.
-
----
-
-## Demo 4: Spanning Columns
-
-In the fourth demo, you will make one grid item span across multiple columns.
-
-You will use:
-
-- `grid-column: span 3;`
-
-This tells the grid item to stretch across three columns.
-
-In this exercise, we are using the span method because it is easier to read when you are first learning Grid.
-
-There is another way to place grid items using grid line numbers, but we are not focusing on that method yet.
-
-For now, the important idea is:
-
-- `grid-column: span 2;` makes an item span two columns.
-- `grid-column: span 3;` makes an item span three columns.
-
----
-
-## Demo 5: Page Layout Preview
-
-In the fifth demo, you will use Grid to preview a simple page layout.
-
-This demo has:
-
-- a main content area
-- a sidebar
-
-The main content area is wider.
-
-The sidebar is narrower.
-
-You will use Grid to place those areas side by side.
-
-This prepares you for future exercises where you will use Grid to create more realistic website layouts.
 
 ---
 
@@ -331,6 +152,35 @@ Remember: submit the repository URL in Canvas, not just the published site URL.
 
 ---
 
+## Repository URL vs. Published Website URL
+
+For this exercise, you will end up with two different URLs.
+
+### Repository URL
+
+The repository URL shows your code on GitHub.
+
+It will look something like this:
+
+- `https://github.com/your-username/css-grid-intro`
+
+This is the URL you submit in Canvas.
+
+### GitHub Pages URL
+
+The GitHub Pages URL shows the live published website.
+
+It will look something like this:
+
+- `https://your-username.github.io/css-grid-intro/`
+
+This is the URL you should add to the About section of your GitHub repository.
+
+Do not submit only the GitHub Pages URL in Canvas. The published site is useful, but the repository is what your instructor needs to grade your code.
+
+
+---
+
 ## GitHub Workflow Reminder
 
 This assignment uses GitHub instead of a ZIP submission.
@@ -354,16 +204,6 @@ Committing records a checkpoint in Git.
 Pushing uploads that checkpoint to GitHub.com.
 
 If you forget to push, the repository on GitHub may not show your latest work.
-
----
-
-## Suggested Commit Message
-
-A good commit message for this exercise might be:
-
-- `Completed CSS Grid intro`
-
-You do not need a long message. A short, clear summary is enough.
 
 ---
 
